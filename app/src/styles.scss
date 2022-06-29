@@ -13,6 +13,7 @@ $red: #EA5455;
 $lightRed: #EA54551F;
 $purple:#703E97;
 $borderGrey: #F3F2F7;
+$toolbarGrey: #6E6B7B;
 
 body {
     background-color: #F8F8F8;
@@ -29,6 +30,7 @@ bh-view_travel_requests {
 }
 .whiteBackground {
     background: $white;
+    color: $toolbarGrey;
 }
 .purpleColor {
     color: $purple;
@@ -131,4 +133,13 @@ bh-view_travel_requests {
 .dependency {
     border-top: 1px solid $borderGrey;
     padding-top: 1em;
+}
+
+    .greyColorToolbar{
+    color: $toolbarGrey;
+    }
+
+.mat-badge-content {
+    background: red;
+    color: $white;
 }

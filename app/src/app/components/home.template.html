@@ -1,0 +1,65 @@
+<div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" fxFill>
+  <div fxLayout="column wrap" class="padding10px whiteBackground" fxFlex="200px" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div fxLayout="row wrap" class="marginBottom1em" fxLayoutAlign="space-between center" [fxShow]="true">
+      <div fxLayout="column wrap" fxFlex="70" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="/Web/Image/logo.png"></div>
+      <div fxLayout="column wrap" fxFlex="10" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="/Web/Image/logoIcon.png"></div>
+    </div>
+    <div fxLayout="row wrap" class="menuItem" fxLayoutGap="1em" fxLayoutAlign="start center" [fxShow]="true">
+      <div fxLayout="column wrap" fxFlex="10" fxLayoutAlign="start stretch" [fxShow]="true">
+        <mat-icon>dashboard</mat-icon>
+      </div>
+      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label>
+          Dashboard</label></div>
+      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="row wrap" fxLayoutAlign="space-between center" [fxShow]="true">
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div class="roundYellowBadge">
+              2</div>
+          </div>
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <mat-icon>expand_more</mat-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div fxLayout="row wrap" class="menuItem radius10px whiteColor purpleBackground" fxLayoutGap="1em" fxLayoutAlign="start center" [fxShow]="true">
+      <div fxLayout="column wrap" fxFlex="10" fxLayoutAlign="start stretch" [fxShow]="true">
+        <mat-icon>flight</mat-icon>
+      </div>
+      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label>
+          Travel Request</label></div>
+    </div>
+    <div fxLayout="row wrap" class="menuItem" fxLayoutGap="1em" fxLayoutAlign="start center" [fxShow]="true">
+      <div fxLayout="column wrap" fxFlex="10" fxLayoutAlign="start stretch" [fxShow]="true">
+        <mat-icon>settings</mat-icon>
+      </div>
+      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label>
+          Settings</label></div>
+    </div>
+  </div>
+  <div fxLayout="column wrap" class="mainRightContainer" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div fxLayout="row wrap" fxFlex="70px" fxLayoutAlign="center center" [fxShow]="true">
+      <mat-card class="toolbarCard">
+        <mat-card-content align="justify">
+          <div fxLayout="row wrap" class="greyColorToolbar" fxLayoutGap="1em" fxLayoutAlign="end stretch" [fxShow]="true">
+            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="/Web/Image/Language.png"></div>
+            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+              <mat-icon>search</mat-icon>
+            </div>
+            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+              <mat-icon matBadge="4">notifications</mat-icon>
+            </div>
+            <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><label>
+                John Doe</label></div>
+            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="/Web/Image/profileImage.png" class="profileImage"></div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div fxLayout="row wrap" class="mainContainer" fxLayoutAlign="center stretch" [fxShow]="true">
+      <div fxLayout="column wrap" fxFlex="95" fxLayoutAlign="start stretch" [fxShow]="true">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

@@ -15,6 +15,12 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-view_travel_requestsComponent
+import { view_travel_requestsComponent } from '../components/view_travel_requests.component';
+//CORE_REFERENCE_IMPORT-new_travel_requestComponent
+import { new_travel_requestComponent } from '../components/new_travel_request.component';
+//CORE_REFERENCE_IMPORT-homeComponent
+import { homeComponent } from '../components/home.component';
 
 /**
  * Reads datasource object and injects the datasource object into window object
@@ -30,7 +36,7 @@ export function startupServiceFactory(startupService: NDataSourceService) {
         });
       });
     });
-  }
+  };
 }
 
 /**
@@ -47,6 +53,12 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-view_travel_requestsComponent
+  view_travel_requestsComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-new_travel_requestComponent
+  new_travel_requestComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-homeComponent
+  homeComponent,
 ];
 
 /**
@@ -72,7 +84,15 @@ export const appProviders = [
 
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
 export const appRoutes = [
-  { path: '', redirectTo: '/', pathMatch: 'full' },
+  {
+    path: 'home',
+    component: homeComponent,
+    children: [
+      { path: '', component: view_travel_requestsComponent },
+      { path: 'new', component: new_travel_requestComponent },
+    ],
+  },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END
