@@ -15,6 +15,8 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-formComponent
+import { formComponent } from '../components/form.component';
 
 /**
  * Reads datasource object and injects the datasource object into window object
@@ -30,7 +32,7 @@ export function startupServiceFactory(startupService: NDataSourceService) {
         });
       });
     });
-  }
+  };
 }
 
 /**
@@ -47,6 +49,8 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-formComponent
+  formComponent,
 ];
 
 /**
