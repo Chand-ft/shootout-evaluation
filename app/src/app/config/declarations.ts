@@ -15,6 +15,8 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-homeComponent
+import { homeComponent } from '../components/home.component';
 
 /**
  * Reads datasource object and injects the datasource object into window object
@@ -30,7 +32,7 @@ export function startupServiceFactory(startupService: NDataSourceService) {
         });
       });
     });
-  }
+  };
 }
 
 /**
@@ -47,6 +49,8 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-homeComponent
+  homeComponent,
 ];
 
 /**
@@ -72,7 +76,8 @@ export const appProviders = [
 
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
 export const appRoutes = [
-  { path: '', redirectTo: '/', pathMatch: 'full' },
+  { path: 'home', component: homeComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END

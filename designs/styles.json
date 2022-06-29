@@ -1,1 +1,34 @@
-{"classes":[]}
+{
+    "classes": [
+        "fullheight",
+        "fullWidth",
+        "mainRightContainer",
+        "whiteColor",
+        "whiteBackground",
+        "purpleColor",
+        "purpleBackground",
+        "purpleBorderedButton",
+        "padding10px",
+        "marginBottom1em",
+        "marginBottom2em",
+        "noMargin",
+        "roundYellowBadge",
+        "radius10px",
+        "menuItem",
+        "toolbarCard",
+        "mainContainer",
+        "profileImage",
+        "headerContainer",
+        "mainContent",
+        "yellowStatus",
+        "greenStatus",
+        "redStatus",
+        "inputContainer",
+        "mat-form-field-appearance-outline",
+        "mat-form-field-infix",
+        "groupedInput",
+        "expansionPanel",
+        "mat-expansion-panel",
+        "dependency"
+    ]
+}

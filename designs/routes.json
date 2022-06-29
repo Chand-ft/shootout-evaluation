@@ -1,9 +1,14 @@
 {
     "routes": [
         {
+            "component": "homeComponent",
+            "path": "home"
+        },
+        {
             "path": "''",
-            "redirectTo": "",
-            "pathMatch": "full"
+            "redirectTo": "/home",
+            "pathMatch": "full",
+            "default": true
         },
         {
             "path": "**",
