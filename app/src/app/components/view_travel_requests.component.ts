@@ -16,6 +16,8 @@ import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_
 import { __NEU_ServiceInvokerService__ } from 'app/n-services/service-caller.service'; //_splitter_
 import { callServerApis } from 'app/sd-services/callServerApis'; //_splitter_
 import { Router } from '@angular/router'; //_splitter_
+import { MatDialog } from '@angular/material/dialog'; //_splitter_
+import { dialogComponent } from './dialog.component'; //_splitter_
 import { MatPaginator } from '@angular/material/paginator'; //_splitter_
 import { MatSort, SortDirection } from '@angular/material/sort'; //_splitter_
 import { MatTableDataSource } from '@angular/material/table'; //_splitter_
@@ -127,13 +129,14 @@ export class view_travel_requestsComponent {
     }
   }
 
-  openDialog(...others) {
+  openDialog(data: any = undefined, ...others) {
     try {
       var bh: any = this.__page_injector__
         .get(SDPageCommonService)
         .constructFlowObject(this);
-      bh.input = {};
+      bh.input = { data: data };
       bh.local = {};
+      bh = this.sd_C2Vi0svWZrCKBpIu(bh);
       //appendnew_next_openDialog
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_zarkFQ0ecxlHbS0s');
@@ -299,6 +302,20 @@ export class view_travel_requestsComponent {
       return bh;
     } catch (e) {
       return await this.errorHandler(bh, e, 'sd_e2jI7LQDxK8XdWjP');
+    }
+  }
+
+  sd_C2Vi0svWZrCKBpIu(bh) {
+    try {
+      const dialogDialog = this.__page_injector__.get(MatDialog);
+      const dialogDialogRef = dialogDialog.open(dialogComponent, {
+        data: bh.input.data,
+        minWidth: '500px',
+      });
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_C2Vi0svWZrCKBpIu');
     }
   }
 

@@ -32,7 +32,7 @@
         <div fxLayout="column wrap" fxFlex="25" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-button class="yellowButton">Action Pending</button></div>
       </div>
       <mat-accordion class="greyColorText" multi="true">
-        <mat-expansion-panel [formGroupName]="&apos;basicDetails&apos;" class="greyColorText">
+        <mat-expansion-panel [formGroupName]="&apos;basicDetails&apos;" class="greyColorText" [expanded]="true">
           <mat-expansion-panel-header>
             <div fxLayout="row wrap" fxLayoutGap=".7em" fxLayoutAlign="start center" [fxShow]="true">
               <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="/Web/Image/basicDetails.png"></div>
@@ -42,7 +42,7 @@
               </div>
             </div>
           </mat-expansion-panel-header>
-          <div fxLayout="row wrap" fxLayoutAlign="space-between start" [fxShow]="true">
+          <div fxLayout="row wrap" fxLayoutAlign="space-between start" [fxShow]="true" [expanded]="true">
             <div fxLayout="column wrap" class="inputContainer" fxFlex="32" fxLayoutAlign="start stretch" [fxShow]="true"><label>
                 Travel Request Title</label>
               <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;never&apos;" [hideRequiredMarker]="false">
@@ -148,7 +148,7 @@
           </div>
           <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button class="purpleBorderedButton" (click)="addDependency()">+ Add Dependent</button></div>
         </mat-expansion-panel>
-        <mat-expansion-panel class="greyColorText">
+        <mat-expansion-panel class="greyColorText" [expanded]="true">
           <mat-expansion-panel-header>
             <div fxLayout="row wrap" fxLayoutGap=".7em" fxLayoutAlign="start center" [fxShow]="true">
               <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="/Web/Image/basicDetails.png"></div>
@@ -222,7 +222,7 @@
           </div>
           <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button class="purpleBorderedButton" (click)="addTravelDetails()">+ Add</button></div>
         </mat-expansion-panel>
-        <mat-expansion-panel class="greyColorText">
+        <mat-expansion-panel class="greyColorText" [expanded]="true">
           <mat-expansion-panel-header>
             <div fxLayout="row wrap" fxLayoutGap=".7em" fxLayoutAlign="start center" [fxShow]="true">
               <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="/Web/Image/accomodation.png"></div>
@@ -292,7 +292,7 @@
           </div>
           <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button class="purpleBorderedButton" (click)="addAccommodationDetails()">+ Add</button></div>
         </mat-expansion-panel>
-        <mat-expansion-panel class="greyColorText">
+        <mat-expansion-panel class="greyColorText" [expanded]="true">
           <mat-expansion-panel-header>
             <div fxLayout="row wrap" fxLayoutGap=".7em" fxLayoutAlign="start center" [fxShow]="true">
               <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="/Web/Image/car.png"></div>

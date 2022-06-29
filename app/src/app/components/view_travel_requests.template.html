@@ -62,9 +62,9 @@
           <ng-container matColumnDef="e662e10d-7f9c-11ac-79bf-b6cd5bbc5f4b">
             <th mat-header-cell *matHeaderCellDef>Action</th>
             <td mat-cell *matCellDef="let table; let i = index;">
-              <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
-                <mat-icon>visibility</mat-icon>
-                <mat-icon>edit</mat-icon>
+              <div fxLayout="row wrap" class="cursor" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+                <mat-icon class="yellowButton cursor">visibility</mat-icon>
+                <mat-icon class="greenStatus cursor" (click)="openDialog(table)">edit</mat-icon>
               </div>
             </td>
           </ng-container>
