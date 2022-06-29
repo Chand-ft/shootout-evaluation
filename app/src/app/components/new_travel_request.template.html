@@ -8,7 +8,29 @@
         </div>
       </div>
     </div>
-    <form [formGroup]="page.requestTravelForm">
+    <form [formGroup]="page.requestTravelForm" class="whiteBackground">
+      <div fxLayout="row wrap" class="panelHeaderDiv fullWidth" fxLayoutAlign="space-between center" [fxShow]="true">
+        <div fxLayout="column wrap" fxFlex="32" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div fxLayout="column wrap" fxLayoutAlign="center stretch" [fxShow]="true"><img imgSrc="/Web/Image/profileImage.png" class="profileImage"></div>
+            <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+              <h1 class="panelHeaderPurpleText noMargin">
+                Kamuzu Jamar</h1>
+              <div>
+                Level: Grade 45</div>
+              <div>
+                Employee ID: WD6789</div>
+            </div>
+          </div>
+        </div>
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div>
+            Mail ID : kamuzujamar@gmail.com</div>
+          <div>
+            Phone number : WD6789</div>
+        </div>
+        <div fxLayout="column wrap" fxFlex="25" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-button class="yellowButton">Action Pending</button></div>
+      </div>
       <mat-accordion class="greyColorText" multi="true">
         <mat-expansion-panel [formGroupName]="&apos;basicDetails&apos;" class="greyColorText">
           <mat-expansion-panel-header>
