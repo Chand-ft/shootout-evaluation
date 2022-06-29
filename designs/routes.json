@@ -2,7 +2,13 @@
     "routes": [
         {
             "path": "home",
-            "component": "homeComponent"
+            "component": "homeComponent",
+            "children": [
+                {
+                    "component": "travel_requestsComponent",
+                    "path": "''"
+                }
+            ]
         },
         {
             "path": "''",

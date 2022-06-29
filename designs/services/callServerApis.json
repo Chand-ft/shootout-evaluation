@@ -1,0 +1,144 @@
+[
+    {
+        "id": "sd_hkAMxxfqyGUP7RIf",
+        "type": "tab",
+        "createdDate": "2022-06-28T19:32:02.953Z",
+        "label": "callServerApis",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "callServerApis",
+        "relativeParentPath": ""
+    },
+    {
+        "id": "sd_alQ4JDGbxbp70Zlt",
+        "type": "Start",
+        "z": "sd_hkAMxxfqyGUP7RIf",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "dynamicRequest",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [
+            {
+                "key": "receivedData",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "accept_bh": false,
+        "functionName": "dynamicRequest",
+        "category": "General",
+        "x": 245,
+        "y": 160,
+        "wires": [
+            [
+                "sd_aZSTK5BcBNC5jJm9"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "callServerApis"
+    },
+    {
+        "id": "sd_aZSTK5BcBNC5jJm9",
+        "type": "Environment",
+        "z": "sd_hkAMxxfqyGUP7RIf",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "bh.input",
+                    "value": "ssdUrl"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_aZSTK5BcBNC5jJm9",
+        "category": "General",
+        "x": 385,
+        "y": 160,
+        "wires": [
+            [
+                "sd_uFfzVvBAauUEjRTo"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_uFfzVvBAauUEjRTo",
+        "type": "Script",
+        "z": "sd_hkAMxxfqyGUP7RIf",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.apiUrl = bh.input.ssdUrl + 'getAllTravelRequests';",
+        "functionName": "sd_uFfzVvBAauUEjRTo",
+        "category": "Function",
+        "x": 490,
+        "y": 160,
+        "wires": [
+            [
+                "sd_hUBaFoLrD4z6GgAt"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_hUBaFoLrD4z6GgAt",
+        "type": "HttpRequest",
+        "z": "sd_hkAMxxfqyGUP7RIf",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "get",
+        "methodMappingObj": {},
+        "urlMapping": "bh.apiUrl",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "apiUrl"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBodyObj": {
+            "mapVarType": "bh",
+            "mapVarValue": ""
+        },
+        "resultMapping": "bh.local.receivedData",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "receivedData"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "functionName": "sd_hUBaFoLrD4z6GgAt",
+        "category": "HTTP",
+        "x": 625,
+        "y": 160,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    }
+]
