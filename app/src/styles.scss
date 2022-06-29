@@ -2,6 +2,7 @@
 
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 @import "nDefaults.scss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
 $mainBackgroundColor:#F8F8F8;
 $white: #FFF;
@@ -13,6 +14,7 @@ $red: #EA5455;
 $lightRed: #EA54551F;
 $purple:#703E97;
 $borderGrey: #F3F2F7;
+$lightpurple:#5E5873;
 
 body {
     background-color: #F8F8F8;
@@ -25,11 +27,20 @@ bh-view_travel_requests {
 .mainRightContainer {
     width: calc(100% - 200px);
 }
+.with89{
+    width: 89%;
+}
+.witdh44{
+    width:44%;
+}
 .whiteColor {
     color: $white;
 }
 .whiteBackground {
     background: $white;
+}
+.lightPurpleText{
+    color:$lightpurple
 }
 .purpleColor {
     color: $purple;
@@ -72,7 +83,7 @@ bh-view_travel_requests {
     mat-icon {
         font-size: 20px ;
     }
-    font-size: 18px;
+    font-size: 15px;
     padding: 5px;
 }
 .toolbarCard {
@@ -82,6 +93,15 @@ bh-view_travel_requests {
     mat-card-content {
         margin: 10px 15px 0 0 !important;
     }
+}
+.mat-badge-content {
+    background: red;
+    color: white;
+}
+.matcard{
+    width: 100%!important;
+    height: 649px!important;
+    margin-top: 1em!important;
 }
 .mainContainer {
     height: calc(100vh - 70px);

@@ -286,7 +286,7 @@ export class travel_requestsComponent {
   async sd_e2jI7LQDxK8XdWjP(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj(null);
+        this.sdService.getPathAndQParamsObj('/');
       await this.__page_injector__
         .get(Router)
         .navigate([this.sdService.formatPathWithParams(path, undefined)]);

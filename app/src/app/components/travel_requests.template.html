@@ -7,7 +7,7 @@
             Travel Requests</label>
         </div>
       </div>
-      <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button class="whiteColor purpleBackground" (click)="goTo()">+ New Request</button></div>
+      <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button routerLink="/addNewRequest" class="whiteColor purpleBackground" (click)="goTo()">+ New Request</button></div>
     </div>
     <div fxLayout="row wrap" class="mainContent" fxLayoutAlign="start stretch" [fxShow]="true">
       <div fxLayout="column" class="fullWidth">
