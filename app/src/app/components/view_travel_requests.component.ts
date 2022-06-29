@@ -17,13 +17,13 @@ import { __NEU_ServiceInvokerService__ } from 'app/n-services/service-caller.ser
 //append_imports_end
 
 @Component({
-  selector: 'bh-home',
-  templateUrl: './home.template.html',
+  selector: 'bh-view_travel_requests',
+  templateUrl: './view_travel_requests.template.html',
   providers: [
     //appendnew_element_providers
   ],
 })
-export class homeComponent {
+export class view_travel_requestsComponent {
   page: any = { dep: {} };
   constructor(
     private __page_injector__: Injector,
@@ -40,7 +40,7 @@ export class homeComponent {
       .get(SDPageCommonService)
       .constructFlowObject(this);
     {
-      this.sd_UDjF2stqYdp1QLfS(bh);
+      this.sd_Yg1DeFGMxIuVW0do(bh);
     }
   }
 
@@ -52,24 +52,24 @@ export class homeComponent {
     //append_listeners
   }
 
-  sd_UDjF2stqYdp1QLfS(bh) {
+  sd_Yg1DeFGMxIuVW0do(bh) {
     try {
-      bh = this.sd_9HQhGTP6iPKAEDoB(bh);
-      //appendnew_next_sd_UDjF2stqYdp1QLfS
+      bh = this.sd_A4XqPVOPTuFJnYix(bh);
+      //appendnew_next_sd_Yg1DeFGMxIuVW0do
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_UDjF2stqYdp1QLfS');
+      return this.errorHandler(bh, e, 'sd_Yg1DeFGMxIuVW0do');
     }
   }
 
-  //appendnew_flow_homeComponent_start
+  //appendnew_flow_view_travel_requestsComponent_start
 
-  sd_9HQhGTP6iPKAEDoB(bh) {
+  sd_A4XqPVOPTuFJnYix(bh) {
     try {
-      //appendnew_next_sd_9HQhGTP6iPKAEDoB
+      //appendnew_next_sd_A4XqPVOPTuFJnYix
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_9HQhGTP6iPKAEDoB');
+      return this.errorHandler(bh, e, 'sd_A4XqPVOPTuFJnYix');
     }
   }
 
@@ -95,5 +95,5 @@ export class homeComponent {
       throw e;
     }
   }
-  //appendnew_flow_homeComponent_Catch
+  //appendnew_flow_view_travel_requestsComponent_Catch
 }
