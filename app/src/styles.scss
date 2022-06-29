@@ -16,6 +16,7 @@ $borderGrey: #F3F2F7;
 
 body {
     background-color: #F8F8F8;
+    font-family: 'Montserrat';
 }
 .fullWidth,
 bh-view_travel_requests {
@@ -46,6 +47,9 @@ bh-view_travel_requests {
 .marginBottom1em {
     margin-bottom: 1em;
 }
+.font27{
+    font-size: 27px;
+}
 .marginBottom2em {
     margin-bottom: 2em;
 }
@@ -68,7 +72,7 @@ bh-view_travel_requests {
     mat-icon {
         font-size: 20px ;
     }
-    font-size: 12px;
+    font-size: 18px;
     padding: 5px;
 }
 .toolbarCard {

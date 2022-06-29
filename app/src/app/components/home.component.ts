@@ -40,7 +40,7 @@ export class homeComponent {
       .get(SDPageCommonService)
       .constructFlowObject(this);
     {
-      this.sd_Wtj7w9POt4vVCdpx(bh);
+      this.sd_BZxqoUVtd5YuJrTu(bh);
     }
   }
 
@@ -52,24 +52,24 @@ export class homeComponent {
     //append_listeners
   }
 
-  sd_Wtj7w9POt4vVCdpx(bh) {
+  sd_BZxqoUVtd5YuJrTu(bh) {
     try {
-      bh = this.sd_uuWpeTvAknfJLSOV(bh);
-      //appendnew_next_sd_Wtj7w9POt4vVCdpx
+      bh = this.sd_lRXXqAeblqTs52Gu(bh);
+      //appendnew_next_sd_BZxqoUVtd5YuJrTu
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_Wtj7w9POt4vVCdpx');
+      return this.errorHandler(bh, e, 'sd_BZxqoUVtd5YuJrTu');
     }
   }
 
   //appendnew_flow_homeComponent_start
 
-  sd_uuWpeTvAknfJLSOV(bh) {
+  sd_lRXXqAeblqTs52Gu(bh) {
     try {
-      //appendnew_next_sd_uuWpeTvAknfJLSOV
+      //appendnew_next_sd_lRXXqAeblqTs52Gu
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_uuWpeTvAknfJLSOV');
+      return this.errorHandler(bh, e, 'sd_lRXXqAeblqTs52Gu');
     }
   }
 

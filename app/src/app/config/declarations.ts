@@ -15,8 +15,8 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
-//CORE_REFERENCE_IMPORT-travel_requestComponent
-import { travel_requestComponent } from '../components/travel_request.component';
+//CORE_REFERENCE_IMPORT-travel_requestsComponent
+import { travel_requestsComponent } from '../components/travel_requests.component';
 //CORE_REFERENCE_IMPORT-homeComponent
 import { homeComponent } from '../components/home.component';
 
@@ -51,8 +51,8 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
-  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-travel_requestComponent
-  travel_requestComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-travel_requestsComponent
+  travel_requestsComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-homeComponent
   homeComponent,
 ];
@@ -80,7 +80,11 @@ export const appProviders = [
 
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
 export const appRoutes = [
-  { path: 'home', component: homeComponent },
+  {
+    path: 'home',
+    component: homeComponent,
+    children: [{ path: '', component: travel_requestsComponent }],
+  },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
