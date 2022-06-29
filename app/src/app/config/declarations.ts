@@ -15,6 +15,8 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-new_travel_requestComponent
+import { new_travel_requestComponent } from '../components/new_travel_request.component';
 //CORE_REFERENCE_IMPORT-formComponent
 import { formComponent } from '../components/form.component';
 
@@ -49,6 +51,8 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-new_travel_requestComponent
+  new_travel_requestComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-formComponent
   formComponent,
 ];
@@ -76,7 +80,8 @@ export const appProviders = [
 
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
 export const appRoutes = [
-  { path: '', redirectTo: '/', pathMatch: 'full' },
+  { path: 'form', component: formComponent },
+  { path: '', redirectTo: '/form', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END

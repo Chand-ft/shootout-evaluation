@@ -23,7 +23,7 @@
         "y": 80,
         "wires": [
             [
-                "sd_29SaoqdRQU5PNx7n"
+                "sd_Wk8sdZqsBt1wmfF9"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -90,13 +90,17 @@
         "serviceDesignerType": "pages",
         "functionName": "sd_Wk8sdZqsBt1wmfF9",
         "category": "Function",
-        "x": 165,
-        "y": 260,
+        "x": 185,
+        "y": 80,
         "wires": [
-            []
+            [
+                "sd_29SaoqdRQU5PNx7n"
+            ]
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": true
+        "generateNext": false,
+        "generated": true,
+        "serviceName": "new_travel_requestComponent"
     },
     {
         "id": "sd_29SaoqdRQU5PNx7n",
@@ -122,12 +126,241 @@
                     "type": "literal",
                     "value": "{}"
                 }
+            },
+            {
+                "textIp": "purposeOFTravel",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "[]"
+                }
             }
         ],
         "functionName": "sd_29SaoqdRQU5PNx7n",
         "category": "Function",
         "x": 301,
         "y": 79.80000305175781,
+        "wires": [
+            [
+                "sd_qxsXphkrL05AuyGd"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true,
+        "serviceName": "new_travel_requestComponent"
+    },
+    {
+        "id": "sd_qxsXphkrL05AuyGd",
+        "type": "Script",
+        "z": "sd_osEacZsdUBcy4IJg",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "//purpose of travel\n\npage.purposeOFTravel=[{viewValue: \"Meeting\"},{viewValue: \"Conference\"},{viewValue: \"Demo\"}];\n\n\n// Dependancy fields\npage.dependancy = {\n  firstName:  ['',Validators.compose([Validators.required])],\n  lastName: ['',Validators.compose([Validators.required])],\n  dateOfBirth: [null,Validators.compose([Validators.required])],\n  gender: ['',Validators.compose([Validators.required])],\n}\n// Travel Details field\npage.travelDetail = {\n  fromCity: ['',Validators.compose([Validators.required])],\n  toCity: ['',Validators.compose([Validators.required])],\n  travelMode: ['',Validators.compose([Validators.required])],\n  fromDate: [null,Validators.compose([Validators.required])],\n  toDate: [null,Validators.compose([Validators.required])],\n  preferredTime: ['',Validators.compose([Validators.required])],\n}\n// Accommodation Details Fields\npage.accommodationDetail = {\n  city: ['',Validators.compose([Validators.required])],\n  checkInDate: [null,Validators.compose([Validators.required])],\n  checkOutDate: [null,Validators.compose([Validators.required])],\n  accommodationType: ['',Validators.compose([Validators.required])],\n  checkInTime: ['',Validators.compose([Validators.required])],\n  checkOutTime: ['',Validators.compose([Validators.required])],\n}\n// Vehicle Details Fields\npage.vehicleDetail = {\n  vehicleType: ['',Validators.compose([Validators.required])],\n  pickUpLocation: ['',Validators.compose([Validators.required])],\n  dropOffLocation: ['',Validators.compose([Validators.required])],\n  pickUpDate: [null,Validators.compose([Validators.required])],\n  pickUpTime: ['',Validators.compose([Validators.required])],\n}\n\npage.requestTravelForm = new page.FormGroup({\n  basicDetails: page.FormBuilder.group({\n    travelRequestTitle: ['',Validators.compose([Validators.required])],\n    travelRequestType: ['',Validators.compose([Validators.required])],\n    travelType:  ['',Validators.compose([Validators.required])],\n    purposeOfTravel: ['',Validators.compose([Validators.required])],\n    dependencies: page.FormBuilder.array([])\n  }),\n  travelDetails: page.FormBuilder.array([page.FormBuilder.group(page.travelDetail)]),\n  accommodationDetails: page.FormBuilder.array([page.FormBuilder.group(page.accommodationDetail)]),\n  vehicleDetails: page.FormBuilder.array([page.FormBuilder.group(page.vehicleDetail)]),\n});",
+        "functionName": "sd_qxsXphkrL05AuyGd",
+        "category": "Function",
+        "x": 405,
+        "y": 80,
+        "wires": [
+            [
+                "sd_dQsRmpqppMVVR8kP"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true,
+        "serviceName": "new_travel_requestComponent"
+    },
+    {
+        "id": "sd_dQsRmpqppMVVR8kP",
+        "type": "Log",
+        "z": "sd_osEacZsdUBcy4IJg",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 0,
+        "logObject": "this.page.requestTravelForm",
+        "functionName": "sd_dQsRmpqppMVVR8kP",
+        "category": "General",
+        "x": 525,
+        "y": 80,
+        "wires": [],
+        "__ssdTypeInputs__": {
+            "logObject": {
+                "type": "this.page",
+                "value": "requestTravelForm",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_pOi8qdxq7ZVPw1xl",
+        "type": "PageStart",
+        "z": "sd_osEacZsdUBcy4IJg",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "add dependency",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "addDependency",
+        "category": "General",
+        "x": 100,
+        "y": 340,
+        "wires": [
+            [
+                "sd_XrFR64MxFw8WRX1n"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "new_travel_requestComponent"
+    },
+    {
+        "id": "sd_XrFR64MxFw8WRX1n",
+        "type": "Script",
+        "z": "sd_osEacZsdUBcy4IJg",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "const arrayControl = <FormArray>page.requestTravelForm.controls['basicDetails'].controls['dependencies'];\nlet newGroup = page.FormBuilder.group(page.dependancy);\narrayControl.push(newGroup);",
+        "functionName": "sd_XrFR64MxFw8WRX1n",
+        "category": "Function",
+        "x": 225,
+        "y": 340,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_babs2yNEnEikhsgG",
+        "type": "PageStart",
+        "z": "sd_osEacZsdUBcy4IJg",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "add travelDetails",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "addTravelDetails",
+        "category": "General",
+        "x": 85,
+        "y": 420,
+        "wires": [
+            [
+                "sd_S8qK2QjnoRrsECFY"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "new_travel_requestComponent"
+    },
+    {
+        "id": "sd_S8qK2QjnoRrsECFY",
+        "type": "Script",
+        "z": "sd_osEacZsdUBcy4IJg",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "const arrayControl = <FormArray>page.requestTravelForm.controls['travelDetails'];\nlet newGroup = page.FormBuilder.group(page.travelDetail);\narrayControl.push(newGroup);",
+        "functionName": "sd_S8qK2QjnoRrsECFY",
+        "category": "Function",
+        "x": 205,
+        "y": 420,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_cVcCh0afmv5LRKSh",
+        "type": "PageStart",
+        "z": "sd_osEacZsdUBcy4IJg",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "add accommodationDetails",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "addAccommodationDetails",
+        "category": "General",
+        "x": 65,
+        "y": 520,
+        "wires": [
+            [
+                "sd_6mMB2ZvIMfS5lS4Y"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "new_travel_requestComponent"
+    },
+    {
+        "id": "sd_6mMB2ZvIMfS5lS4Y",
+        "type": "Script",
+        "z": "sd_osEacZsdUBcy4IJg",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "const arrayControl = <FormArray>page.requestTravelForm.controls['accommodationDetails'];\nlet newGroup = page.FormBuilder.group(page.accommodationDetail);\narrayControl.push(newGroup);",
+        "functionName": "sd_6mMB2ZvIMfS5lS4Y",
+        "category": "Function",
+        "x": 225,
+        "y": 520,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_IUcGmKCZPv1AQEaS",
+        "type": "PageStart",
+        "z": "sd_osEacZsdUBcy4IJg",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "add vehicleDetails",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "addVehicleDetails",
+        "category": "General",
+        "x": 85,
+        "y": 600,
+        "wires": [
+            [
+                "sd_EryEjZ1rUB1kltXI"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "new_travel_requestComponent"
+    },
+    {
+        "id": "sd_EryEjZ1rUB1kltXI",
+        "type": "Script",
+        "z": "sd_osEacZsdUBcy4IJg",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "const arrayControl = <FormArray>page.requestTravelForm.controls['vehicleDetails'];\nlet newGroup = page.FormBuilder.group(page.vehicleDetail);\narrayControl.push(newGroup);",
+        "functionName": "sd_EryEjZ1rUB1kltXI",
+        "category": "Function",
+        "x": 245,
+        "y": 620,
         "wires": [
             []
         ],
