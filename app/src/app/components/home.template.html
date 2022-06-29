@@ -23,10 +23,16 @@
       </div>
     </div>
   </div>
-  <div fxLayout="column wrap" class="mainRightContainer" fxLayoutAlign="start stretch" [fxShow]="true">
-    <div fxLayout="row wrap" class="whiteBackground headerContainer" fxLayoutAlign="start stretch" [fxShow]="true"></div>
-    <div fxLayout="row wrap" class="whiteBackground headerContainer" fxLayoutAlign="start stretch" [fxShow]="true"></div>
-    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="column wrap" style="height: 100%; width: calc( 100% -  250px)%" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div fxLayout="row wrap" style="width: 100%; height: 70px;" class="fullWidth whiteBackground" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div>
+        DK DK DK DK DK </div>
+    </div>
+    <div fxLayout="row wrap" style="background: blue; width: 100;  height: 70px;" class="fullWidth" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div>
+        DK Alphie </div>
+    </div>
+    <div fxLayout="row wrap" style="background: red;" class="fullWidth mainContent" fxLayoutAlign="start stretch" [fxShow]="true">
       <router-outlet></router-outlet>
     </div>
   </div>
