@@ -17,6 +17,8 @@ $toolbarGrey: #6E6B7B;
 
 body {
     background-color: #F8F8F8;
+    color: $toolbarGrey;
+
 }
 .fullWidth,
 bh-view_travel_requests {
@@ -47,6 +49,8 @@ bh-view_travel_requests {
 }
 .marginBottom1em {
     margin-bottom: 1em;
+    color: $toolbarGrey;
+
 }
 .marginBottom2em {
     margin-bottom: 2em;
@@ -125,19 +129,19 @@ bh-view_travel_requests {
     font-size: 12px;
 }
 // Expansion Panel
-.expansionPanel {
-    .mat-expansion-panel {
-        margin-bottom: 0.5em;
-    }
-}
+// .expansionPanel {
+//     .mat-expansion-panel {
+//         margin-bottom: 0.5em;
+//     }
+// }
 .dependency {
     border-top: 1px solid $borderGrey;
     padding-top: 1em;
 }
 
-    .greyColorToolbar{
+.greyColorText{
     color: $toolbarGrey;
-    }
+}
 
 .mat-badge-content {
     background: red;

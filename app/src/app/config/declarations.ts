@@ -15,6 +15,8 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-dialogComponent
+import { dialogComponent } from '../components/dialog.component';
 //CORE_REFERENCE_IMPORT-view_travel_requestsComponent
 import { view_travel_requestsComponent } from '../components/view_travel_requests.component';
 //CORE_REFERENCE_IMPORT-new_travel_requestComponent
@@ -53,6 +55,8 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-dialogComponent
+  dialogComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-view_travel_requestsComponent
   view_travel_requestsComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-new_travel_requestComponent
@@ -89,7 +93,7 @@ export const appRoutes = [
     component: homeComponent,
     children: [
       { path: '', component: view_travel_requestsComponent },
-      { path: 'new', component: new_travel_requestComponent },
+      { path: 'new-request', component: new_travel_requestComponent },
     ],
   },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
