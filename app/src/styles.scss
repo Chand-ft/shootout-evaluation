@@ -2,3 +2,133 @@
 
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 @import "nDefaults.scss";
+
+$mainBackgroundColor:#F8F8F8;
+$white: #FFF;
+$yellow: #F1CB14;
+$lightYellow: #FF9F431F;
+$green: #28C76F;
+$lightGreen: #28C76F1F;
+$red: #EA5455;
+$lightRed: #EA54551F;
+$purple:#703E97;
+$borderGrey: #F3F2F7;
+
+body {
+    background-color: #F8F8F8;
+}
+.fullWidth,
+bh-view_travel_requests {
+    width: 100%;
+}
+.mainRightContainer {
+    width: calc(100% - 200px);
+}
+.whiteColor {
+    color: $white;
+}
+.whiteBackground {
+    background: $white;
+}
+.purpleColor {
+    color: $purple;
+}
+.purpleBackground {
+    background: $purple;
+}
+.purpleBorderedButton {
+    border: $purple solid 1px !important;
+    color: $purple;
+}
+.padding10px {
+    padding: 10px;
+}
+.marginBottom1em {
+    margin-bottom: 1em;
+}
+.marginBottom2em {
+    margin-bottom: 2em;
+}
+.noMargin {
+    margin: 0;
+}
+.roundYellowBadge {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: $yellow;
+    color: $white;
+    text-align: center;
+    font-size: 12px;
+}
+.radius10px {
+    border-radius: 10px;
+}
+.menuItem {
+    mat-icon {
+        font-size: 20px ;
+    }
+    font-size: 12px;
+    padding: 5px;
+}
+.toolbarCard {
+    padding: 5px !important;
+    height: 40px;
+    width: 95%;
+    mat-card-content {
+        margin: 10px 15px 0 0 !important;
+    }
+}
+.mainContainer {
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+}
+.profileImage {
+    margin: -10px 5px;
+}
+.headerContainer {
+    height: 70px;
+}
+.mainContent {
+    height: calc(100vh - 140px);
+    overflow-y: auto;
+}
+.yellowStatus, .greenStatus, .redStatus {
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.yellowStatus {
+    background-color: $lightYellow;
+    color: $yellow;
+}
+.greenStatus {
+    background-color: $lightGreen;
+    color: $green;
+}
+.redStatus {
+    background-color: $lightRed;
+    color: $red;
+}
+// Input Container
+.inputContainer {
+    .mat-form-field-appearance-outline .mat-form-field-infix {
+        padding: 0.3em 0 0.8em 0;
+    }
+}
+// Grouped input
+.groupedInput {
+    border: solid 1px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+// Expansion Panel
+.expansionPanel {
+    .mat-expansion-panel {
+        margin-bottom: 0.5em;
+    }
+}
+.dependency {
+    border-top: 1px solid $borderGrey;
+    padding-top: 1em;
+}
