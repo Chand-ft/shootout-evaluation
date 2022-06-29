@@ -1,0 +1,103 @@
+[
+    {
+        "id": "sd_S0tMzq9En1SP0UfM",
+        "type": "tab",
+        "createdDate": "2022-06-29T11:36:30.682Z",
+        "label": "apiServeiceCall",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "apiServeiceCall",
+        "relativeParentPath": ""
+    },
+    {
+        "id": "sd_9DihQUQvkCDJMOLJ",
+        "type": "Start",
+        "z": "sd_S0tMzq9En1SP0UfM",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "body",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "result",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "accept_bh": false,
+        "functionName": "sd_9DihQUQvkCDJMOLJ",
+        "category": "General",
+        "x": 65,
+        "y": 340,
+        "wires": [
+            [
+                "sd_ZgGQoND57UdBFMPT"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "apiServeiceCall"
+    },
+    {
+        "id": "sd_ZgGQoND57UdBFMPT",
+        "type": "HttpRequest",
+        "z": "sd_S0tMzq9En1SP0UfM",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "post",
+        "methodMappingObj": {},
+        "urlMapping": "\"http://localhost:8081/api/getTravelRequests\"",
+        "urlMappingObj": {
+            "mapVarType": "str",
+            "mapVarValue": "http://localhost:8081/api/getTravelRequests"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "bh.input.body",
+        "reqBodyObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": "body"
+        },
+        "resultMapping": "bh.local.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "functionName": "sd_ZgGQoND57UdBFMPT",
+        "category": "HTTP",
+        "x": 425,
+        "y": 340,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    }
+]

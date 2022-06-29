@@ -80,8 +80,8 @@ export const appProviders = [
 
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
 export const appRoutes = [
-  { path: 'form', component: formComponent },
-  { path: '', redirectTo: '/form', pathMatch: 'full' },
+  { path: 'addNewRequest', component: formComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END

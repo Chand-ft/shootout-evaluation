@@ -2,11 +2,11 @@
     "routes": [
         {
             "component": "formComponent",
-            "path": "form"
+            "path": "addNewRequest"
         },
         {
             "path": "''",
-            "redirectTo": "/form",
+            "redirectTo": "/home",
             "pathMatch": "full",
             "default": true
         },

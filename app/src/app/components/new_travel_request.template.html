@@ -71,7 +71,7 @@
               <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;never&apos;">
                 <mat-select [(value)]="option1" formControlName="purposeOfTravel" placeholder="Select Purpose of Travel" [required]="false">
                   <ng-template ngFor let-option [ngForOf]="page.purposeOFTravel" let-i="index">
-                    <mat-option [value]>{{option.viewValue}}</mat-option>
+                    <mat-option [value]="option.viewValue">{{option.viewValue}}</mat-option>
                   </ng-template>
                 </mat-select>
 
@@ -141,7 +141,7 @@
               <div fxLayout="column wrap" class="inputContainer" fxFlex="32" fxLayoutAlign="start stretch" [fxShow]="true"><label class="lableText">
                   From City</label>
                 <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;never&apos;">
-                  <mat-select formControlName="fromCity" placeholder="Select" [required]="false">
+                  <mat-select formControlName="fromCity" placeholder="Select City" [required]="false">
                     <ng-template ngFor let-option [ngForOf] let-i="index">
                       <mat-option [value]></mat-option>
                     </ng-template>
@@ -152,7 +152,7 @@
               <div fxLayout="column wrap" class="inputContainer" fxFlex="32" fxLayoutAlign="start stretch" [fxShow]="true"><label class="lableText">
                   To City</label>
                 <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;never&apos;">
-                  <mat-select formControlName="toCity" placeholder="Select" [required]="false">
+                  <mat-select formControlName="toCity" placeholder="Select City" [required]="false">
                     <ng-template ngFor let-option [ngForOf] let-i="index">
                       <mat-option [value]></mat-option>
                     </ng-template>
@@ -165,7 +165,7 @@
                 <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;never&apos;">
                   <mat-select formControlName="travelMode" placeholder="Select Travel Mode" [required]="false">
                     <ng-template ngFor let-option [ngForOf]="page.travelMode" let-i="index">
-                      <mat-option [value]>{{option.viewValue}}</mat-option>
+                      <mat-option [value]="option.viewValue">{{option.viewValue}}</mat-option>
                     </ng-template>
                   </mat-select>
 
@@ -174,7 +174,7 @@
               <div fxLayout="column wrap" class="inputContainer" fxFlex="32" fxLayoutAlign="start stretch" [fxShow]="true"><label class="lableText">
                   From Date</label>
                 <mat-form-field [appearance]="&apos;outline&apos;" (click)="fromDate.open()">
-                  <input matInput placeholder="Date Picker" [matDatepicker]="fromDate" formControlName="fromDate" [required]="false" [disabled]="false" readonly="true">
+                  <input matInput placeholder="Select Date " [matDatepicker]="fromDate" formControlName="fromDate" [required]="false" [disabled]="false" readonly="true">
                   <mat-datepicker-toggle matSuffix [for]="fromDate" disabled="false"></mat-datepicker-toggle>
                   <mat-datepicker #fromDate [disabled]="false"></mat-datepicker>
 
@@ -183,7 +183,7 @@
               <div fxLayout="column wrap" class="inputContainer" fxFlex="32" fxLayoutAlign="start stretch" [fxShow]="true"><label>
                   To Date</label>
                 <mat-form-field [appearance]="&apos;outline&apos;" (click)="toDate.open()">
-                  <input matInput placeholder="Date Picker" [matDatepicker]="toDate" formControlName="toDate" [required]="false" [disabled]="false" readonly="true">
+                  <input matInput placeholder="Select Date" [matDatepicker]="toDate" formControlName="toDate" [required]="false" [disabled]="false" readonly="true">
                   <mat-datepicker-toggle matSuffix [for]="toDate" disabled="false"></mat-datepicker-toggle>
                   <mat-datepicker #toDate [disabled]="false"></mat-datepicker>
 
@@ -192,7 +192,7 @@
               <div fxLayout="column wrap" class="inputContainer" fxFlex="32" fxLayoutAlign="start stretch" [fxShow]="true"><label class="lableText">
                   Preferred Time</label>
                 <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;never&apos;" [hideRequiredMarker]="false">
-                  <input matInput type="time" placeholder="Input" [required]="false" formControlName="preferredTime">
+                  <input matInput type="time" placeholder="Select Time" [required]="false" formControlName="preferredTime">
 
                 </mat-form-field>
               </div>
@@ -262,7 +262,7 @@
               <div fxLayout="column wrap" class="inputContainer" fxFlex="32" fxLayoutAlign="start stretch" [fxShow]="true"><label class="lableText">
                   Check Out Time</label>
                 <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;never&apos;" [hideRequiredMarker]="false">
-                  <input matInput type="time" placeholder="Input" [required]="false" formControlName="checkOutTime">
+                  <input matInput type="time" placeholder="Check Out Time" [required]="false" formControlName="checkOutTime">
 
                 </mat-form-field>
               </div>
@@ -329,5 +329,10 @@
         </mat-expansion-panel>
       </mat-accordion>
     </form>
+    <div fxLayout="row wrap" class="fullWidth" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true">
+      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button class="purpleBorderedButton" (click)="page.requestTravelForm.reset()">Reset</button></div>
+      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button class="purpleBorderedButton">Save As Draft</button></div>
+      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button class="purpleBackground whiteColor" (click)="submit(page.requestTravelForm.value)">Submit</button></div>
+    </div>
   </div>
 </div>

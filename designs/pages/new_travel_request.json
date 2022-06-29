@@ -345,8 +345,8 @@
         "flow_type": "sync",
         "functionName": "addVehicleDetails",
         "category": "General",
-        "x": 85,
-        "y": 600,
+        "x": 65,
+        "y": 620,
         "wires": [
             [
                 "sd_EryEjZ1rUB1kltXI"
