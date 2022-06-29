@@ -145,7 +145,8 @@ export class new_travel_requestComponent {
     try {
       this.page.dependancy = {};
       this.page.travelDetail = {};
-      this.page.purposeOFTravel = [];
+      this.page.purposeOFTravel = {};
+      this.page.travelMode = {};
       bh = this.sd_qxsXphkrL05AuyGd(bh);
       //appendnew_next_sd_29SaoqdRQU5PNx7n
       return bh;
@@ -157,11 +158,17 @@ export class new_travel_requestComponent {
   sd_qxsXphkrL05AuyGd(bh) {
     try {
       const page = this.page; //purpose of travel
-
       page.purposeOFTravel = [
         { viewValue: 'Meeting' },
         { viewValue: 'Conference' },
         { viewValue: 'Demo' },
+      ];
+
+      //TravelMode
+      page.travelMode = [
+        { viewValue: 'car' },
+        { viewValue: 'flight' },
+        { viewValue: 'Bus' },
       ];
 
       // Dependancy fields

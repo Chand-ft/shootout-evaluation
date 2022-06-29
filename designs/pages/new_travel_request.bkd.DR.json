@@ -2282,6 +2282,7 @@
                                                     {
                                                         "_key": "class",
                                                         "_value": [
+                                                            "grayBorder",
                                                             "groupedInput"
                                                         ],
                                                         "_type": "dav",
@@ -2784,6 +2785,7 @@
                                                     {
                                                         "_key": "class",
                                                         "_value": [
+                                                            "grayBorder",
                                                             "groupedInput"
                                                         ],
                                                         "_type": "dav",
@@ -3000,7 +3002,9 @@
                                                         },
                                                         {
                                                             "_key": "class",
-                                                            "_value": "",
+                                                            "_value": [
+                                                                "lableText"
+                                                            ],
                                                             "_type": "dav",
                                                             "_attrDef": "p"
                                                         },
@@ -3706,6 +3710,7 @@
                                                     {
                                                         "_key": "class",
                                                         "_value": [
+                                                            "grayBorder",
                                                             "groupedInput"
                                                         ],
                                                         "_type": "dav",
@@ -3922,7 +3927,9 @@
                                                         },
                                                         {
                                                             "_key": "class",
-                                                            "_value": "",
+                                                            "_value": [
+                                                                "lableText"
+                                                            ],
                                                             "_type": "dav",
                                                             "_attrDef": "p"
                                                         },
@@ -4206,6 +4213,7 @@
                                                     {
                                                         "_key": "class",
                                                         "_value": [
+                                                            "grayBorder",
                                                             "groupedInput"
                                                         ],
                                                         "_type": "dav",
@@ -4422,7 +4430,9 @@
                                                         },
                                                         {
                                                             "_key": "class",
-                                                            "_value": "",
+                                                            "_value": [
+                                                                "lableText"
+                                                            ],
                                                             "_type": "dav",
                                                             "_attrDef": "p"
                                                         },
@@ -4990,7 +5000,7 @@
                                         },
                                         {
                                             "_key": "[(value)]",
-                                            "_value": "",
+                                            "_value": "option1",
                                             "_type": "kv",
                                             "_attrDef": "p"
                                         },
@@ -10186,14 +10196,14 @@
                                             },
                                             {
                                                 "_key": "placeholder",
-                                                "_value": "Select",
+                                                "_value": "Select Travel Mode",
                                                 "_type": "kv",
                                                 "_attrDef": "p",
                                                 "_useAsLabel": true
                                             },
                                             {
                                                 "_key": "datasource",
-                                                "_value": "",
+                                                "_value": "page.travelMode",
                                                 "_type": "a",
                                                 "_attrDef": "p"
                                             },
@@ -10232,7 +10242,7 @@
                                             },
                                             {
                                                 "_key": "optionView",
-                                                "_value": "",
+                                                "_value": "{{option.viewValue}}",
                                                 "_type": "a",
                                                 "_attrDef": "p"
                                             },

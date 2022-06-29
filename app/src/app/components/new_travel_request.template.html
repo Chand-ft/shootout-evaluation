@@ -33,14 +33,14 @@
               <mat-radio-group formControlName="travelRequestType" [required]="false">
                 <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start center" [fxShow]="true">
                   <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-                    <div fxLayout="row wrap" class="groupedInput" fxLayoutGap=".25em" fxLayoutAlign="space-between center" [fxShow]="true">
+                    <div fxLayout="row wrap" class="grayBorder groupedInput" fxLayoutGap=".25em" fxLayoutAlign="space-between center" [fxShow]="true">
                       <mat-radio-button [value]="&apos;self&apos;" [required]="false"></mat-radio-button><img imgSrc="/Web/Images/person.png"><label class="lableText">
                         Self</label>
                     </div>
                   </div>
                   <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-                    <div fxLayout="row wrap" class="groupedInput" fxLayoutGap=".25em" fxLayoutAlign="space-between center" [fxShow]="true">
-                      <mat-radio-button [value]="&apos;on_behalf&apos;" [required]="false"></mat-radio-button><img imgSrc="/Web/Images/group.png"><label>
+                    <div fxLayout="row wrap" class="grayBorder groupedInput" fxLayoutGap=".25em" fxLayoutAlign="space-between center" [fxShow]="true">
+                      <mat-radio-button [value]="&apos;on_behalf&apos;" [required]="false"></mat-radio-button><img imgSrc="/Web/Images/group.png"><label class="lableText">
                         On behalf</label>
                     </div>
                   </div>
@@ -52,14 +52,14 @@
               <mat-radio-group formControlName="travelType" [required]="false">
                 <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start center" [fxShow]="true">
                   <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-                    <div fxLayout="row wrap" class="groupedInput" fxLayoutGap=".25em" fxLayoutAlign="space-between center" [fxShow]="true">
-                      <mat-radio-button [required]="false"></mat-radio-button><img imgSrc="/Web/Images/domestic.png"><label>
+                    <div fxLayout="row wrap" class="grayBorder groupedInput" fxLayoutGap=".25em" fxLayoutAlign="space-between center" [fxShow]="true">
+                      <mat-radio-button [required]="false"></mat-radio-button><img imgSrc="/Web/Images/domestic.png"><label class="lableText">
                         Domestic</label>
                     </div>
                   </div>
                   <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-                    <div fxLayout="row wrap" class="groupedInput" fxLayoutGap=".25em" fxLayoutAlign="space-between center" [fxShow]="true">
-                      <mat-radio-button [required]="false"></mat-radio-button><img imgSrc="/Web/Images/international.png"><label>
+                    <div fxLayout="row wrap" class="grayBorder groupedInput" fxLayoutGap=".25em" fxLayoutAlign="space-between center" [fxShow]="true">
+                      <mat-radio-button [required]="false"></mat-radio-button><img imgSrc="/Web/Images/international.png"><label class="lableText">
                         International</label>
                     </div>
                   </div>
@@ -69,7 +69,7 @@
             <div fxLayout="column wrap" class="inputContainer" fxFlex="32" fxLayoutAlign="start stretch" [fxShow]="true"><label class="lableText">
                 Purpose of Travel</label>
               <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;never&apos;">
-                <mat-select formControlName="purposeOfTravel" placeholder="Select Purpose of Travel" [required]="false">
+                <mat-select [(value)]="option1" formControlName="purposeOfTravel" placeholder="Select Purpose of Travel" [required]="false">
                   <ng-template ngFor let-option [ngForOf]="page.purposeOFTravel" let-i="index">
                     <mat-option [value]>{{option.viewValue}}</mat-option>
                   </ng-template>
@@ -163,9 +163,9 @@
               <div fxLayout="column wrap" class="inputContainer" fxFlex="32" fxLayoutAlign="start stretch" [fxShow]="true"><label class="lableText">
                   Travel Mode</label>
                 <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;never&apos;">
-                  <mat-select formControlName="travelMode" placeholder="Select" [required]="false">
-                    <ng-template ngFor let-option [ngForOf] let-i="index">
-                      <mat-option [value]></mat-option>
+                  <mat-select formControlName="travelMode" placeholder="Select Travel Mode" [required]="false">
+                    <ng-template ngFor let-option [ngForOf]="page.travelMode" let-i="index">
+                      <mat-option [value]>{{option.viewValue}}</mat-option>
                     </ng-template>
                   </mat-select>
 
